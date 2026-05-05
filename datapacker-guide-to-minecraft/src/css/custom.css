@@ -1,0 +1,117 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #4a852e;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --icg-themed-background-dark:#d7e9d0;
+  --icg-themed-background:#c4cc80;
+  --code:#0d2506;
+  --code-background:#8ffa51;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #44c225;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --icg-themed-background-dark:#252b23;
+  --icg-themed-background:#53572d;
+  --code:#33ff00;
+  --code-background:#27271f;
+}
+
+.theme-doc-sidebar-container{
+  width: 14%;
+}
+.sidebar_njMd{
+  width: 100%;
+}
+.menu{
+  background-image: linear-gradient(var(--icg-themed-background-dark), var(--icg-themed-background));
+  width: 100%;
+}
+.theme-layout-navbar{
+  background: var(--icg-themed-background-dark);
+}
+/* Main Command (Yellow) */
+.token.keyword { color: #edc7ff !important; font-style: normal !important }
+
+/* Selectors (Aqua/Cyan) */
+.token.variable { color: #55FFFF !important; font-style: normal !important }
+
+/* Coordinates (Green) */
+.token.number { color: #55FF55 !important; font-style: normal !important}
+
+/* Namespaces (Gray/White) */
+.token.class-name { color: #AAAAAA !important; font-style: normal !important }
+
+/* Comments (Italic Gray) */
+.token.comment { color: #7f7f7f !important; font-style: italic; }
+
+code{
+  color:var(--code);
+  background-color: var(--code-background);
+}
+
+
+
+/* 1. Layout Engine: Forces links to be row-flex and sets up the icon space */
+li[class*='icon-'] > .menu__link,
+li[class*='icon-'] > .menu__list-item-collapsible > .menu__link {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+
+/* Create the icon pseudo-element only for the IMMEDIATE link of the icon class */
+li[class*='icon-'] > .menu__link::before,
+li[class*='icon-'] > .menu__list-item-collapsible > .menu__link::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  /* Uses the variable assigned below */
+  background-image: var(--sidebar-icon);
+}
+
+/* 2. The Icon Library: Assigning SVGs to variables */
+
+.icon-home { 
+  --sidebar-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fcfedc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l-2 0l9 -9l9 9l-2 0' /%3E%3Cpath d='M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7' /%3E%3Cpath d='M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6' /%3E%3C/svg%3E"); 
+}
+
+.icon-cube { 
+  --sidebar-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fcfedc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718' /%3E%3Cpath d='M12 22v-10' /%3E%3Cpath d='M12 12l8.73 -5.04' /%3E%3Cpath d='M3.27 6.96l8.73 5.04' /%3E%3C/svg%3E"); 
+}
+
+.icon-cubes { 
+  --sidebar-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fcfedc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4a1 1 0 0 1 1 -1h5a1 1 0 0 1 1 1v5a1 1 0 0 1 -1 1h-5a1 1 0 0 1 -1 -1l0 -5' /%3E%3Cpath d='M3 14h12a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h3a2 2 0 0 1 2 2v12' /%3E%3C/svg%3E"); 
+}
+
+.icon-terminal { 
+  --sidebar-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fcfedc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 7l5 5l-5 5' /%3E%3Cpath d='M12 19l7 0' /%3E%3C/svg%3E"); 
+}
