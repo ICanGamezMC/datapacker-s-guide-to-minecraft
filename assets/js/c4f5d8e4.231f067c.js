@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdatapacker_guide_to_minecraft=self.webpackChunkdatapacker_guide_to_minecraft||[]).push([["823"],{7176(a,e,t){t.r(e),t.d(e,{default:()=>u});var r=t(4848);t(6540);var c=t(6347);function u(){return(0,r.jsx)(c.rd,{to:"datapacker-s-guide-to-minecraft/intro"})}}}]);

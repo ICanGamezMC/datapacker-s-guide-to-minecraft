@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdatapacker_guide_to_minecraft=self.webpackChunkdatapacker_guide_to_minecraft||[]).push([["823"],{7176(a,e,t){t.r(e),t.d(e,{default:()=>c});var r=t(4848);t(6540);var u=t(6347);function c(){return(0,r.jsx)(u.rd,{to:"/intro"})}}}]);
