@@ -63,7 +63,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
@@ -81,14 +80,15 @@ const config = {
             position: 'left',
             label: 'Datapack',
           },
+          // If "Beet" is a different sidebar, change the ID below
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'tutorialSidebar', 
             position: 'left',
             label: 'Beet',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/ICanGamezMC/datapacker-s-guide-to-minecraft',
             label: 'GitHub',
             position: 'right',
           },
@@ -101,46 +101,29 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Get Started',
+                to: '/', // Points to your main docs page since routeBasePath is '/'
               },
             ],
           },
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
+              { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
             ],
           },
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
+              { label: 'Blog', to: '/blog' },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} ICanGamezMC. Built with Docusaurus.`,
       },
       prism: {
-        additionalLanguages: ['mcfunction','console'],
+        // Essential for your Minecraft console/mcfunction highlighting
+        additionalLanguages: ['mcfunction', 'console'],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
