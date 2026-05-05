@@ -9,6 +9,8 @@ Minecraft commands have been a basic building block for interaction with the min
 *mcfunction* (Minecraft Function) files. There are many different ways to write commands and execute them in minecraft, either with the use of 
 minecraft chat, command blocks, or datapacks.
 
+`Player Starts Command` -> `Command Passes Information` -> `Returns To Minecraft Console`
+
 ## Chat Commands
 With minecraft you can always execute any chat commands if you have **operator permissions**. To enable **operator permissions** either enable 
 cheats when creating a world or have an operator use `/op <Player Name>` to give that person operator.  
@@ -32,3 +34,10 @@ Usually when minecraft uses the command there are certain *impossible* states th
 **zero** or **negative** count to an item. There is a lot more imposible states like negative time and data merging of players too.  
 This little demo shows red if the count is invalid!
 <ItemCounter itemName="diamond" />
+
+### Other limitations
+With chat command there is an issue when running commands like how a repeating command block or datapack would run.  
+Think of it like *running a command every 20th a second*, that would be a lot of typing! So minecraft has a solution to solve the issue, and that solution is called command blocks.  
+There is also an issue with executing commands that are too big for normal minecraft chat, thats also where minecraft command blocks solve the issue too with their extended command output length.  
+There will be more information about command blocks further reading into the documentation. 
+
