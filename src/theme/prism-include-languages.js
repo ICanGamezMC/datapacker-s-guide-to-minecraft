@@ -13,7 +13,9 @@ export default function prismIncludeLanguages(PrismObject) {
   additionalLanguages.forEach((lang) => {
     if (lang === 'mcfunction') {
       require('./prism-mcfunction.js');
-    } else if (lang !== 'php') {
+    }else if (lang === 'console') {
+      require('./prism-console.js');
+    }else if (lang !== 'php') {
       try {
         require(`prismjs/components/prism-${lang}.js`);
       } catch (e) {}

@@ -2,6 +2,7 @@
 sidebar_position: 1
 sidebar_class_name: icon-terminal
 ---
+import ItemCounter from '@site/src/components/Counter';
 
 # Commands
 Minecraft commands have been a basic building block for interaction with the minecraft environment. Almost all minecraft datapacks use minecraft commands or rather known as 
@@ -14,6 +15,20 @@ cheats when creating a world or have an operator use `/op <Player Name>` to give
 When running a minecraft command in chat you start with the slash symbol `/`. This gives context to minecraft that you are running a command! 
 Think of it like another language that the minecraft talks to, and by speaking this language you can ask it to do things.  
 Running commands like the `/time` brings up options like `add` or `set` which are auto completed. Minecraft offers up auto completion 
-when options are limited, if not then it will offer up type semantics if there is an expected output, but if all else failed then it will 
+when options are limited, if not then it will offer up type semantics if there is an expected output, but if all else fails then it will 
 give an error if the command is not built up correctly like  
  `/give @s minecraft:acacia_log[minecraft:item_name=""]`.
+
+## Context Situations
+Usually when running commands like `say hi` it outputs as the player running the command.  
+Without an executer to the command it will run inside the server console. 
+An example of a player running the `say hi` command in console view would be
+
+```console
+[Render thread/INFO]: [CHAT] [ICanGamezMC] hi
+```
+## Limitations
+Usually when minecraft uses the command there are certain *impossible* states that a player can't control, like giving yourself 
+**zero** or **negative** count to an item. There is a lot more imposible states like negative time and data merging of players too.  
+This little demo shows red if the count is invalid!
+<ItemCounter itemName="diamond" />

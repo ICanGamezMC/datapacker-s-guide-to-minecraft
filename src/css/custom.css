@@ -67,6 +67,8 @@
 /* Comments (Italic Gray) */
 .token.comment { color: #7f7f7f !important; font-style: italic; }
 
+.token.console_ran {color: #ffb1b1 !important; font-style: normal !important}
+
 code{
   color:var(--code);
   background-color: var(--code-background);
