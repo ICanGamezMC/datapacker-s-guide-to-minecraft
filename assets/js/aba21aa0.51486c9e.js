@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdatapacker_guide_to_minecraft=self.webpackChunkdatapacker_guide_to_minecraft||[]).push([["747"],{7093(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
