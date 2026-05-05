@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdatapacker_guide_to_minecraft=self.webpackChunkdatapacker_guide_to_minecraft||[]).push([["247"],{9611(a){a.exports=JSON.parse('{"metadata":{"permalink":"/datapacker-s-guide-to-minecraft/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":0,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
