@@ -26,10 +26,24 @@ the first one is the command input, the second one is the redstone condition, an
 ### Command input
 This field accepts any string input with or without the `/` symbol.
 ### Redstone condition
-This field has 3 options, `Needs Redstone`, `Always Active`, and `Conditional`. 
+This field has 2 options, `Needs Redstone` and `Always Active`. 
+### Conditions
+This field has 2 options, `Conditional` and `Unconditional`
 ### Command block type
 This field has 3 options, `Impulse`, `Repeating`, and `Chain`.
 
 ## Preview of UI
 
 ![large-image](https://minecraft.wiki/images/thumb/Command_Block_GUI.png/800px-Command_Block_GUI.png?fb024)
+
+# More In-depth 
+> This is for more technical people 
+
+## Configuration
+As already known command blocks allow for storage of commands and these conditional statements like always active or Unconditional. 
+With these we can stack command blocks and Configure command blocks to build off each other.  
+The most common configuration of command blocks is:  
+- Chain command block (Unconditional)
+- Repeating command block (Always Active)
+
+
