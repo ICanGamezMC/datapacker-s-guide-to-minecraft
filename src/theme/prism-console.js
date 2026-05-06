@@ -12,7 +12,7 @@
         }
       },
       // 4. Also catch 'Render' if it appears outside brackets
-      'keyword': /\b(?:Render|CHAT|kill|say)\b/i,
+      'keyword': /\b(?:Render|CHAT|kill|say|System|Server)\b/i,
       
       'player-name': {
         pattern: /\[[a-zA-Z0-9_]{2,16}\]/,

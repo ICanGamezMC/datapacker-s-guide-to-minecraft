@@ -6,17 +6,27 @@ sidebar_class_name: icon-code-5
 # Say
 This command allows for natural display of text through interaction of the player.  
 start the command with `/say`.  
-Then choose a selector like `@s` or `@p`.  
 Then your message!  
 
-The full command will be like `/say @p Hello World`.
+The full command will be like `/say <message>`.  
+This is where `<message>` is like a greedy phrase where it takes all words and symbols after the command is invoked.  
+This also means 
+that you can't format the `<message>`.
+
+## Selectors
+The `/say` command does allow to parse `<selector>` arguments like `@s` or `@e` and return the output of the entity type or player name.
 
 ## Server side
 This command is easy for server or datapacks themself to run quick test commands! Output will 
 usually look something like this when ran in the server console.
 
+```console
+[Render thread/INFO]: [System] [CHAT] [Server] Hello World
 ```
-[Server] Hello World
+## Command block output
+When running `/say` through a command block it outputs as an entity with name `@` because of its empty selector.
+```console
+[Render thread/INFO]: [System] [CHAT] [@] Hello World
 ```
 
 ## Use cases
@@ -24,6 +34,8 @@ Useful for a quick debug when coding a datapack or adventure map.
 Great for when you want to broadcast messages to console.  
 Useful for sending messages through server console.
 
-# Reference
-
-Temp currently
+### Reference
+Information:  
+https://learn.microsoft.com/en-us/minecraft/creator/commands/commands/say?view=minecraft-bedrock-stable  
+https://minecraft.wiki/w/Commands/say#:~:text=JE:%20:%20message,used%20to%20mention%20all%20players  
+https://www.minecraftforum.net/forums/minecraft-java-edition/redstone-discussion-and/commands-command-blocks-and/2525680-the-say-command#:~:text=vague%20and%20unhelpful.-,"/say%20@a"%20I%20understand%20as%20%27announce%20to,https://discord.gg/QAFXFtZ
