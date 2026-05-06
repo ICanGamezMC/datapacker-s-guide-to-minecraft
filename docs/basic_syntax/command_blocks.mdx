@@ -3,16 +3,33 @@ sidebar_position: 2
 sidebar_class_name: icon-terminal
 ---
 
-# What are command blocks?
-command blocks are like chat commands stored in block data, useful for automatic running, and linking of commands. Command blocks are obtained either through the `/give @s minecraft:command_block` or operator tab configured in acessability settings.  
+# Command blocks
+> There are 3 different types of command blocks  
+
+<img src="https://minecraft.wiki/images/Impulse_Command_Block.gif?fb024" style={{ width: '70px', verticalAlign: 'middle' }} /> Impulse, Executes command once!  
+
+<img src="https://minecraft.wiki/images/thumb/Repeating_Command_Block.gif/150px-Repeating_Command_Block.gif?7ab3a" style={{ width: '70px', verticalAlign: 'middle' }} /> Repeating, Executes command repeatedly!  
+
+<img src="https://minecraft.wiki/images/thumb/Chain_Command_Block.gif/150px-Chain_Command_Block.gif?7c365" style={{ width: '70px', verticalAlign: 'middle' }} /> Chain, Executes command when triggered by another command block!  
+
+## What are command blocks?
+command blocks are like chat commands stored in block data, useful for automatic running, and linking of commands. 
+Command blocks are obtained either through the `/give @s minecraft:command_block` or operator tab configured in acessability settings.  
 :::note[Usual use cases]
 Usually minecraft commands are used in servers, adventure maps, demo scripts, or storage of commands.
 :::
 
-## Command blocks
-> There are 3 different types of command blocks
+## Basic Configuration
+When you configure a command block you have 3 options to choose from, 
+the first one is the command input, the second one is the redstone condition, and the third one is the command block type.
 
+### Command input
+This field accepts any string input with or without the `/` symbol.
+### Redstone condition
+This field has 3 options, `Needs Redstone`, `Always Active`, and `Conditional`. 
+### Command block type
+This field has 3 options, `Impulse`, `Repeating`, and `Chain`.
 
+## Preview of UI
 
-
-this page still is being worked on
+![large-image](https://minecraft.wiki/images/thumb/Command_Block_GUI.png/800px-Command_Block_GUI.png?fb024)
