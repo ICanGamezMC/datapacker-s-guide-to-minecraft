@@ -14,16 +14,38 @@ Without specifying the count it will always default to giving 1 of that item.
 :::
 
 ## How /give sends items
-The `/give` command sends
+The `/give` command summons an item entity at the targets location as an entity. If the player's inventory is full and is in survival 
+then the items will drop, but if the player is in creative then it will immediately despawn.  
+If you are worried about the potential lag of `/give` then best practices are to use `/loot` commands.
+
+## Item NBT
+Modern NBT *(Named Binary Tag)* or components uses JSON-styled formatting inside square brackets `[]`. Then after the 
+brackets inside it is immediately followed by the **tag name** used by said item to apply data and functions to itself.  
+NBT offers tons of creativity to creating items, and allows for datapack and resourcepack functionality.  
+### Item Generators
+It can be hard trying to remember all NBT tags and what they do, so the minecraft community offers lots of solutions to generating 
+the `/give` command!  
+
 
 
 ## Examples
-
-
+Giving yourself 1 diamond:  
+`/give @s diamond`  
+Giving player **Bob** 4 acacia logs:  
+`/give Bob minecraft:acacia_log 4`  
+Giving yourself a diamond sword with custom name and lore:  
+```mcfunction
+/give @s diamond_sword[custom_name=[{"text":"Custom name","bold":true,"italic":false,"color":"light_purple"}],lore=[[{"text":"YUP","italic":false,"color":"gray"}]]]
+```
 
 ## Syntax
 You will almost always start out with `/give` when grabbing an item.
 
 
 # Reference
-Temperary here too!
+Information:  
+https://minecraft.wiki/w/Commands/give  
+https://minecraft.wiki/w/Item_components  
+https://docs.fabricmc.net/develop/items/custom-data-components  
+https://learn.microsoft.com/en-us/minecraft/creator/reference/content/commandsreference/examples/commands/give?view=minecraft-bedrock-stable  
+https://minecraft.fandom.com/wiki/Commands/give#:~:text=8%20References-,Syntax,only%5D%20be%20of%20player%20type  
