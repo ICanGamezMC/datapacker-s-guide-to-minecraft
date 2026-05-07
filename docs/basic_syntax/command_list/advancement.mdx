@@ -9,3 +9,29 @@ sidebar_class_name: icon-code-1
 The `/advancement` command allows you to grant or revoke advancements to players.
 The general command logic goes for the following `/advancement <grant|revoke> <selector> <operation> <advancement> [criterion]` 
 **without the brackets \<\>**.  
+
+## Granting and Revoking
+The first argument of the command is either `grant` or `revoke` which determines whether you 
+get or remove an advancement.
+
+## Operation
+The options for this argument are `only`, `from`, `until`, and `everything`.
+- `only` grants or revokes only that specified advancement.
+- `from` grants or revokes the specified advancement and all advancements that are children of it.
+- `until` grants or revokes the specified advancement and all advancements that are parents of it
+- `everything` grants or revokes all advancements.
+- `through` grants or revokes the specified advancement and all advancements that are parents and children of it.
+
+## Criterion
+When using `/advancement` command you can specify a `criterion` on said advancement. 
+Though what is a criterion?  
+A `criterion` is a specific requirement for an advancement to be granted, usually like a checklist of requirements.  
+
+example : `/advancement grant @s only minecraft:adventure/adventuring_time plains`  
+
+The `minecraft:adventure/adventuring_time` advancement requires the player to visit multiple biomes, and the `plains` criterion is one of those biomes. 
+So by granting that criterion you are granting the advancement as if the player has visited the plains biome. 
+
+## UI
+![large-image](https://minecraft.wiki/images/thumb/AdvancementsInterface.png/700px-AdvancementsInterface.png?768a0)  
+Usually when calling for an advancement you can look up the parent or child of the advancement easily in the ui.
