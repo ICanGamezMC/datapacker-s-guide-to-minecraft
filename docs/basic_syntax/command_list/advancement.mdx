@@ -16,18 +16,39 @@ get or remove an advancement.
 
 ## Operation
 The options for this argument are `only`, `from`, `until`, and `everything`.
-- `only` grants or revokes only that specified advancement.
-- `from` grants or revokes the specified advancement and all advancements that are children of it.
-- `until` grants or revokes the specified advancement and all advancements that are parents of it
-- `everything` grants or revokes all advancements.
-- `through` grants or revokes the specified advancement and all advancements that are parents and children of it.
+### Only
+- `only` grants or revokes only that specified advancement.  
+
+ignores parent advancements, only gives `advancement`
+### From
+- `from` grants or revokes the specified advancement and all advancements that are children of it.  
+
+grabs all children of the advancements in scope `advancement` -> `child` -> `child`
+### Until
+- `until` grants or revokes the specified advancement and all advancements that are parents of it  
+
+grabs all parents of the advancement into scope `parent` \<\- `parent` \<\- `advancement`
+### Everything
+- `everything` grants or revokes all advancements.  
+
+Grabs everything into scope, even side branches  
+`parent` \<\- `advancement` -> `child`  
+`parent_2` \<\- `advancement_2` -> `child_2`
+### Through
+- `through` grants or revokes the specified advancement and all advancements that are parents and children of it.  
+
+This is useful for grabbing everything that leads up to an advancement to the end  
+`parent` \<\- `advancement` -> `child`
 
 ## Criterion
 When using `/advancement` command you can specify a `criterion` on said advancement. 
 Though what is a criterion?  
 A `criterion` is a specific requirement for an advancement to be granted, usually like a checklist of requirements.  
 
-example : `/advancement grant @s only minecraft:adventure/adventuring_time plains`  
+example : 
+```mcfunction
+advancement grant @s only minecraft:adventure/adventuring_time plains
+```  
 
 The `minecraft:adventure/adventuring_time` advancement requires the player to visit multiple biomes, and the `plains` criterion is one of those biomes. 
 So by granting that criterion you are granting the advancement as if the player has visited the plains biome. 
