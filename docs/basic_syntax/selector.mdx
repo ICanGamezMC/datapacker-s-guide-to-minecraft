@@ -1,0 +1,48 @@
+---
+sidebar_position: 3
+sidebar_class_name: icon-person-add
+---
+
+# Selectors
+Selectors are a way to filter any minecraft entity from each other. Using selectors you have to start with `@` symbol. 
+This also helps reduce lag if selectors are used to narrow down entities. Selectors are composed of a base variable `@e`
+and a set of arguments enclosed in square brackets `[]`.
+:::note[Note]
+Arguments are optional when it comes to selectors.
+:::
+## Base variables
+Base variables always start the selector like `@e[type=player]`.  
+* `@p`: Nearest player
+* `@r`: Random Entity
+* `@a`: All players
+* `@e`: All entities
+* `@s`: Current entity
+* `@n`: Nearest entity  
+
+
+## Arguments
+Arguments add a layer to filter entities and are seperated by a comma `,`. Selectors are also booleans which means you can invert their output with `!`.  
+* `type`: Entity type
+* `tag`: Entity internal tag
+* `name`: Entity name
+* `limit`: Max count of entity
+* `sort`: Sorting method (nearest, furthest, random, arbitrary)
+* `distance`: Distance of int or range of an entity to the where the command runs
+* `advancements`: Players with certain [advancements](./command_list/advancement.mdx)
+* `gamemode`: Players in a certain gamemode
+* `level`: Experience level of an entity
+* `nbt`: Entity with a specific or general NBT Component 
+* `predicate`: Filter based on a datapack file that has more arguments
+* `scores`: Entity with a scoreboard
+* `team`: Entity on a certain team
+* `x`: Entity on a certain x axis
+* `y`: Entity on a certain y axis
+* `z`: Entity on a certain z axis
+* `dx`: Entity between x and x + dx
+* `dy`: Entity between y and y + dy
+* `dz`: Entity between z and z + dz
+* `x_rotation`: Entity's rotation on the x axis
+* `y_rotation`: Entity's rotation on the y axis
+* `z_rotation`: Entity's rotation on the z axis
+
+###
