@@ -45,12 +45,18 @@ Arguments add a layer to filter entities and are seperated by a comma `,`. Selec
 * `y_rotation`: Entity's rotation on the y axis
 * `z_rotation`: Entity's rotation on the z axis
 
-### Chaining Arguments
+### Chaining arguments
 Arguments can be chained together with a comma `,`. Though chaining some things like multiple of the same type when they both cancel out each 
 other won't pass through as a valid command.  
 Example would be passing through multiple tag elements: `@e[tag=good,tag=bob]`.  
 Example of passing conflicting arguments: `@e[type=minecraft:zombie,type=minecraft:player]`
 
-### Not Arguments
+### Not arguments
 Arguments can also be inverted like booleans! You can invert something that would output `true` as `false`. With arguments you can invert like by adding an exlamation point to the front of the argument.  
 Example of inverting an argument: `@e[!tag=bob]`.  
+
+## Advanced arguments
+Sometimes arguments offer more options based on variables being passed. Some arguments don't take strict syntax and offer more emergent properties that allow the selector to specify more general/specific catagories.
+
+### Distance, level, and scores
+When using ints in these catagories of arguments they offer the ability to choose a range of numbers. This is incredibly usefull for arguments like `distance` because it won't give an exact radius that an entity has to be in, but rather a distance from that point. 
