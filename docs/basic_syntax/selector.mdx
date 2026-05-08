@@ -71,6 +71,10 @@ An example of not comparison `@e[scores={Objective1=!1}]`.
 Having multiple scoreboards in a selector statement means that all scoreboards have to return a true before the whole `scores` argument runs true. With not comparisons you can also use it inside a range of values.
 
 ### Type
+:::note[Important Information]
+There are forbidden selectors when using `type` like `@p` and `@a` because their type is already built in.   
+Types are also case sensitive, always following snake case statements like `"Hello World" -> "hello_world"`
+:::
 Type can have multiple entities if and only if its followed by a `!` symbol. This is because the type argument narrows down by entity, and an 
 entity cannot be two types of entities at once.  
 Example of an incorrect statement: `@e[type=pig,type=zombie]`.   
@@ -78,3 +82,5 @@ Example of a correct statement: `@e[type=!pig,type=!zombie]`.
 Type arguments can also have catagories, and to start a catagory you use `#`. Catagories exist all throughout minecraft, and it helps 
 generalize minecraft entities for this use case instead of having to type multiple not statements.  
 Example of catagory statement: `@e[type=#minecraft_skeletons]`.   
+
+
