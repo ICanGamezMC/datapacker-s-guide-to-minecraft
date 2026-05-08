@@ -16,10 +16,12 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+
   --icg-themed-background-dark:#d7e9d0;
   --icg-themed-background:#c4cc80;
-  --code:#0d2506;
-  --code-background:#8ffa51;
+  --code:#41ff07;
+  --code-inline: #e3ffdc;
+  --code-background:#19361a;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -33,10 +35,11 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  --icg-themed-background-dark:#252b23;
+  --icg-themed-background-dark:#030303;
   --icg-themed-background:#53572d;
   --code:#33ff00;
-  --code-background:#27271f;
+  --code-inline: #e3ffdc;
+  --code-background:#19361a;
 }
 
 .theme-doc-sidebar-container{
@@ -69,11 +72,19 @@
 
 .token.console_ran {color: #ffb1b1 !important; font-style: normal !important}
 
+.theme-layout-footer{
+  background-color:var(--icg-themed-background);
+}
+
+
 code{
   color:var(--code);
   background-color: var(--code-background);
 }
 
+.token.plain {color: var(--code-inline) !important}
+.token.variable{color: var(--code-inline) !important}
+.token.console-prefix.punctuation{color: var(--code-inline) !important}
 
 
 /* 1. Layout Engine: Forces links to be row-flex and sets up the icon space */

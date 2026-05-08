@@ -7,7 +7,7 @@ export default function ItemCounter({ itemName = "Diamonds" }) {
     <div style={{
       border: 'none',
       padding: '20px',
-      backgroundColor: 'none',
+      backgroundColor: "var(--code-background)",
       borderRadius: '4px',
       display: 'inline-block',
       color: 'white',
@@ -18,7 +18,7 @@ export default function ItemCounter({ itemName = "Diamonds" }) {
       <button 
         onClick={() => setCount(count + 1)}
         style={{
-          backgroundColor: 'none',
+          backgroundColor: "var(--code-background)",
           border: 'none',
           color: 'white',
           padding: '10px 20px',
@@ -35,7 +35,7 @@ export default function ItemCounter({ itemName = "Diamonds" }) {
       <button 
         onClick={() => setCount(count - 1)}
         style={{
-          backgroundColor: 'none',
+          backgroundColor: "var(--code-background)",
           border: 'none',
           color: 'white',
           padding: '10px 20px',
@@ -43,6 +43,8 @@ export default function ItemCounter({ itemName = "Diamonds" }) {
           boxShadow: 'inset -2px -2px 0px #444, inset 2px 2px 0px #DDD',
           fontWeight: 'bold'
         }}
+        onMouseDown={(e) => e.target.style.boxShadow = 'inset 2px 2px 0px #444'}
+        onMouseUp={(e) => e.target.style.boxShadow = 'inset -2px -2px 0px #444, inset 2px 2px 0px #DDD'}
       >
         REMOVE ITEM
       </button>
