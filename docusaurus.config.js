@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'DGTM',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/logo.svg',
+  favicon: 'img/logo.png',
   
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
