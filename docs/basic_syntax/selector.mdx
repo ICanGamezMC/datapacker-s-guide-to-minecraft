@@ -61,11 +61,20 @@ Sometimes arguments offer more options based on variables being passed. Some arg
 ### Distance, level, and scores
 When using ints in these catagories of arguments they offer the ability to choose a range of numbers. This is incredibly usefull for arguments like `distance` because it won't give an exact radius that an entity has to be in, but rather a distance range from that point.  
 Use of ranges in minecraft syntax looks like `..` with numbers before or after or on either side.  
-An example of this would be `@e[distance=..5]`  
+An example of this would be `@e[distance=..5]`.  
 This distance command is from range **0 up to and including 5**. 
 
 ### Scores
-Scores have an interesting list operation so you don't have to repeat yourself when looking for extra scoreboard values. They also have not comparisons to the value of a spesific scoreboard itself.
+Scores have an interesting list operation so you don't have to repeat yourself when looking for extra scoreboard values. They also have not comparisons to the value of a spesific scoreboard itself.  
 An example of multiple scoreboard comparison: `@e[scores={Objective1=1,Objective2=19}]`.  
 An example of not comparison `@e[scores={Objective1=!1}]`.  
+Having multiple scoreboards in a selector statement means that all scoreboards have to return a true before the whole `scores` argument runs true. With not comparisons you can also use it inside a range of values.
 
+### Type
+Type can have multiple entities if and only if its followed by a `!` symbol. This is because the type argument narrows down by entity, and an 
+entity cannot be two types of entities at once.  
+Example of an incorrect statement: `@e[type=pig,type=zombie]`.   
+Example of a correct statement: `@e[type=!pig,type=!zombie]`.  
+Type arguments can also have catagories, and to start a catagory you use `#`. Catagories exist all throughout minecraft, and it helps 
+generalize minecraft entities for this use case instead of having to type multiple not statements.  
+Example of catagory statement: `@e[type=#minecraft_skeletons]`.   
