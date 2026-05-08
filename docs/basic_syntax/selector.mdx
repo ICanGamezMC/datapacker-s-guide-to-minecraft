@@ -50,3 +50,7 @@ Arguments can be chained together with a comma `,`. Though chaining some things 
 other won't pass through as a valid command.  
 Example would be passing through multiple tag elements: `@e[tag=good,tag=bob]`.  
 Example of passing conflicting arguments: `@e[type=minecraft:zombie,type=minecraft:player]`
+
+### Not Arguments
+Arguments can also be inverted like booleans! You can invert something that would output `true` as `false`. With arguments you can invert like by adding an exlamation point to the front of the argument.  
+Example of inverting an argument: `@e[!tag=bob]`.  
