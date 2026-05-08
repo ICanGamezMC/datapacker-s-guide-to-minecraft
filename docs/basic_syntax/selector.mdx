@@ -65,4 +65,7 @@ An example of this would be `@e[distance=..5]`
 This distance command is from range **0 up to and including 5**. 
 
 ### Scores
-Scores have an interesting list operation so you don't have to repeat yourself when looking for extra scoreboard values.
+Scores have an interesting list operation so you don't have to repeat yourself when looking for extra scoreboard values. They also have not comparisons to the value of a spesific scoreboard itself.
+An example of multiple scoreboard comparison: `@e[scores={Objective1=1,Objective2=19}]`.  
+An example of not comparison `@e[scores={Objective1=!1}]`.  
+
