@@ -54,6 +54,29 @@ execute align xyz run tp @p ~.5 ~ ~.5
 ```
 The snapping points are `X`, `Y`, and `Z` respectivly.
 
+## Local coordinates
+These are coordinates that directly use your pitch and yaw for entities. To start out the coordinates use `^` for all three positions.  
+This command is up 2 blocks relative to where the player is looking at:
+```mcfunction
+tp @p ^ ^2 ^
+```
+Here is an example of how local coordinates `^` effect where its position is.  
+
+| Axis | Direction |
+| :--- | ---: |
+| X\+ | Right |
+| X\- | Left |
+| Y\+ | Up |
+| Y\- | Down |
+| Z\+ | Forward |
+| Z\- | Backward |
+
+### Local and relative/Absolute can't mix
+Due to the different coordinate spaces being used, we can't mix world coordinates with entity coordinates.  
+That is why this command fails to load: 
+```mcfunction
+tp @p ~ ~ ^5
+```
 
 
 ### Reference
