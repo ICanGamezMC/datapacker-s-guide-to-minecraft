@@ -107,16 +107,33 @@ Using Rotation in the `/tp` command looks something like this:
 tp @p ~ ~ ~ 90 0
 ```
 
-### Relative Rotation
+### Relative rotation
 You can also use the relative `~` coordinates with rotational coordinates.
 And example of a 45 degree turn would be:
 
 ```mcfunction
 tp @p ~ ~ ~ ~45 ~
 ```
+### Facing coords/entities
+You can also force an entity to look at a block or entity.
+This example shows a player looking at block `0 100 0`.
+```mcfunction
+tp @p ~ ~ ~ facing 0 100 0
+```
+You can also use relative coords with this too,
+```mcfunction
+tp @p ~ ~ ~ facing 0 ~ 0
+```
+This is an example of an entity with [`type=`](selector.mdx) zombie facing the nearest player
+```mcfunction
+execute as @e[type=zombie] at @s run tp @s ~ ~ ~ facing entity @p eyes
+```
 
 
 ### Reference
 
 Information:  
+https://apexminecrafthosting.com/guides/general/how-to-tp-to-coordinates-in-minecraft/  
+https://minecraft.wiki/w/Commands/execute  
+https://minecraft.wiki/w/Coordinates  
 https://minecraft.makecode.com/courses/csintro/coordinates/overview  
