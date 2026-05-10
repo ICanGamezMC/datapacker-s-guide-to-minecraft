@@ -4,7 +4,7 @@ sidebar_class_name: icon-person-add
 ---
 
 # Selectors
-Selectors are a way to filter any minecraft entity from each other. Using selectors you have to start with `@` symbol. 
+Selectors are a way to filter any minecraft entity from each other. Using selectors you have to start with an `@` symbol. 
 This also helps reduce lag if selectors are used to narrow down entities. Selectors are composed of a base variable `@e`
 and a set of arguments enclosed in square brackets `[]`.
 :::note[Note]
@@ -100,3 +100,25 @@ Example of starting nbt: `@e[nbt={}]`.
 NBT selectors are great for small/medium projects, but using predicates is much faster than nbt selectors.
 :::
 
+## Exact names
+Target selectors also allow for specific selections either by name or UUID. To start out a command like running a command to execute at 
+a player named bob we just run `/execute at Bob run say hi` which this command runs at bobs position. 
+
+### UUID
+With `UUID` (Universally Unique Identifier) running a command removed the whole check process, this makes commands that check over lots of entities faster if using `UUID`. 
+`UUID` looks like `b7d2fce5-e292-49b4-b136-98c0f2b75063` which is represented as a 36 character string.
+:::note[To grab a UUID quickly]
+You just look at the entity when typing out the command, when the `selector` section pops up you get a `UUID` string of that entity.
+:::
+## Use cases
+Executing commands at entities.
+Taking count of entities.
+Clearing all item entities.
+
+### Reference  
+
+Information:  
+https://learn.microsoft.com/en-us/minecraft/creator/reference/content/commandsreference/examples/commandtypes/type_selection?view=minecraft-bedrock-stable  
+https://minecraft.fandom.com/wiki/Target_selectors  
+https://minecraft.wiki/w/Target_selectors  
+https://maven.fabricmc.net/docs/yarn-1.19.4+build.1/net/minecraft/command/EntitySelector.html
