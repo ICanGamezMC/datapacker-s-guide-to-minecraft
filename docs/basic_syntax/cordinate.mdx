@@ -77,6 +77,43 @@ That is why this command fails to load:
 ```mcfunction
 tp @p ~ ~ ^5
 ```
+Or even 
+```mcfunction
+tp @p 0 0 ^5
+```
+## Rotational coordinates
+Entities with having coordinates also can look anywhere. When using it, usually it's only offered up in the `/tp` command. 
+These coordinates are `yaw` and `pitch`.  
+
+**Yaw Rotations**
+
+| Value | Direction |
+| :--- | ---: |
+| 0 | South |
+| 90 | West |
+| 180 | North |
+| -90 | East |
+
+**Pitch Rotations**
+
+| Value | Direction |
+| :--- | ---: |
+| -90 | Up |
+| 0 | Horizontal |
+| 90 | Down |
+
+Using Rotation in the `/tp` command looks something like this: 
+```mcfunction
+tp @p ~ ~ ~ 90 0
+```
+
+### Relative Rotation
+You can also use the relative `~` coordinates with rotational coordinates.
+And example of a 45 degree turn would be:
+
+```mcfunction
+tp @p ~ ~ ~ ~45 ~
+```
 
 
 ### Reference
