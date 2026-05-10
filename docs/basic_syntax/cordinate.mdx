@@ -4,11 +4,55 @@ sidebar_class_name: icon-person-add
 ---
 
 
-# Coordinate
+# Coordinates
 Everything in minecraft has coords (Coordinates) and with commands you can execute or specify where a absolute, relative, or local position is. 
-With using coords in minecraft it always has 3 values `x`, `y`, and `z`. When pressing `F3` on your keyboard it pops up 
+With using coords in minecraft it always has 3 values `x`, `y`, and `z`. When pressing `F3` on your keyboard it pops up and the upper left hand side 
+there should be a XYZ coord display.
+
+## Axis directions
 
 
+| Axis | Direction |
+| :--- | ---: |
+| X\+ | East |
+| X\- | West |
+| Y\+ | Up |
+| Y\- | Down |
+| Z\+ | South |
+| Z\- | North |
+
+## Absolute coordinates
+Running a simple `/tp` command like so:
+```mcfunction
+tp @p 100 64 -20
+```
+Means:
+- X = 100
+- Y = 64
+- Z = -20
+
+This teleports you to that exact location in world space. That means it won't change and will stay absolute in any setting or dimension.
+
+## Relative coordinates
+Lets run another `/tp` command but use the relative symbol`~`.
+```mcfunction
+tp @p ~0 ~2 ~0
+```
+What this command does is it executes at your position, thats what `~` does! 
+### Mixing relative with absolute
+You can mix both relative coords with absolute coords as they use the same world coordinate system.  
+An example of this would be:  
+```mcfunction
+tp @p 100 ~5 -20
+```
+
+### Aligning with block grid
+You can use `execute align` with the coordinate system, though just using that will align with the block grid.  
+An example of snapping the nearest player to the middle top/bottom of a block face:
+```mcfunction
+execute align xyz run tp @p ~.5 ~ ~.5
+```
+The snapping points are `X`, `Y`, and `Z` respectivly.
 
 
 
