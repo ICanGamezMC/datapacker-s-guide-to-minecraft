@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+page themes
+
+
+
+Put at the bottom of the page
+
+
+import ThemeWrapper from '@site/src/components/ThemeWrapper';
+
+<ThemeWrapper colorClass="page-red">
+</ThemeWrapper>

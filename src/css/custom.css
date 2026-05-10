@@ -42,19 +42,54 @@
   --code-background:#21221c;
 }
 
+
+/* Main Page Themes For Customization*/
+[data-theme='dark'] body.page-red {
+  --icg-themed-background: #832c2c !important;
+  --icg-themed-background-dark: #360404 !important;
+  --ifm-color-primary: #ff4d4d !important;
+  --code:#ffee00;
+}
+[data-theme='light'] body.page-red {
+  --icg-themed-background: #ffd9ad !important;
+  --icg-themed-background-dark: #ff9494 !important;
+  --ifm-color-primary: #ff4d4d !important;
+  --code:#744500;
+}
+
+
+
+
+
+
 .theme-doc-sidebar-container{
   width: 14%;
+  background-image: linear-gradient(
+    var(--icg-themed-background-dark), 
+    var(--icg-themed-background)
+  ) !important;
 }
 .sidebar_njMd{
   width: 100%;
 }
 .menu{
-  background-image: linear-gradient(var(--icg-themed-background-dark), var(--icg-themed-background));
+  background: transparent !important;
   width: 100%;
 }
 .theme-layout-navbar{
   background: var(--icg-themed-background-dark);
 }
+
+
+
+
+
+
+
+
+
+
+
 /* Main Command (Yellow) */
 .token.keyword { color: #edc7ff !important; font-style: normal !important }
 
