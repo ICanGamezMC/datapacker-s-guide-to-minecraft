@@ -4,9 +4,10 @@
 
 
 
+BUILD THE WEBSITE LOCALLY
+*note to self, stop randomly forgetting this cmd :p
 
-
-
+npm start 
 
 
 
