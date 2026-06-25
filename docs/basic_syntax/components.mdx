@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_class_name: icon-person-add
+sidebar_class_name: icon-code-5
 ---
 
 # Components
@@ -46,6 +46,16 @@ Here is a list of some useful item components and what they could be used for:
 ![large-image](https://cdn.gamever.io/content/ckeditor/2025/04/13/image-20250414004224-1.jpeg)
 
 ## Entity components
+
+When working with entities there is several issues when working on what would be belived are component based items.  
+Entities use the older system of NBT data to create custom mobs. Use [This website](https://www.gamergeeks.net/apps/minecraft/mob-generator) to create custom mobs 
+easier.
+
+Though when executing at entities when running a command you still would use the newer components to select stuff like what item the entity has. 
+Below is an example of detecting the current entity having atleast 10 of any type of item in its inventory.
+```mcfunction
+execute if items entity @s container.* *[minecraft:count=10] run say there is 10 of atleast 1 type of item
+```
 
 ## Block entity components
 

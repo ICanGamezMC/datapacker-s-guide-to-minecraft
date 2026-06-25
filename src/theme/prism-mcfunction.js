@@ -3,32 +3,27 @@
   if (typeof Prism !== 'undefined') {
     Prism.languages.mcfunction = {
       'comment': /#.*/,
-        // The "Yellow" commands (Main Actions)
-        'command': {
-            pattern: /(^[\t ]*)(?:say|execute|tp|teleport|summon|give|setblock|fill|data|tag|team|scoreboard|advancement|tellraw|kill)\b/m,
-            lookbehind: true,
-            alias: 'keyword'
+        'keyword': {
+            pattern: /\b(?:say|execute|tp|teleport|summon|give|setblock|fill|data|tag|team|scoreboard|advancement|tellraw|kill)\b/
         },
-        // Target Selectors (usually blue or aqua)
-        'selector': {
-            pattern: /@[apre]\[[^\]]*\]|@[apre]/,
-            alias: 'variable'
+        'green': {
+            pattern: /\b(?:if|unless)\b/
         },
         // NBT Data (treat it like JSON)
-        'nbt': {
+        'string': {
             pattern: /\{.*?\}/,
-            inside: Prism.languages.json,
-            alias: 'string'
+            inside: Prism.languages.json
+        },
+        'variable': {
+            pattern: /\b(?:@s|@p)\b/
         },
         // Coordinates
-        'coordinate': {
-            pattern: /\b[~^]?-?\d*(?:\.\d+)?\b|\b-?\d+(?:\.\d+)?\b/,
-            alias: 'number'
-        },
+        //'number': {
+        //    pattern: /\b[~^]?-?\d*(?:\.\d+)?\b|\b-?\d+(?:\.\d+)?\b/
+        //},
         // Namespaces (e.g., minecraft:stone)
-        'namespace': {
-            pattern: /\b[a-z0-9_.-]+:[a-z0-9_./-]+\b/,
-            alias: 'class-name'
+        'class-name': {
+            pattern: /\b[a-z0-9_.-]+:[a-z0-9_./-]+\b/
         }
     };
     console.log("Mcfunction grammar successfully attached to Prism.");
