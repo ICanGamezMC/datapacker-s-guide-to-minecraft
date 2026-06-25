@@ -13,10 +13,37 @@ Components solved a major issue when it comes to clearly defined fields, making 
 Items using components use the square brackets `[]` to define components. Components always follow snake case so instead of `[`**Tooltip Display**`={hide_tooltip:true}]` it's instead 
 `[`**tooltip_display**`={hide_tooltip:true}]`.
 
-Defining multiple components you need to use `,` like so `[rarity=uncommon,tooltip_display={hide_tooltip:true}]`. This is like a list of data that can be applied to an item 
+### Other syntax
 
+Defining multiple components you need to use `,` like so `[rarity=uncommon,tooltip_display={hide_tooltip:true}]`. You can also 
+use `!` for cases you want to remove information to an item, like `[!food,!consumable]` for cooked beef.
 
 ## Item components
+
+Components that are attatched to items replaced, added, or removed data held by that item. This system was overhauld in 
+`1.20.5` previously called nbt.
+
+An example of nbt components for making uncommon cobblestone:
+```mcfunction
+give @s cobblestone[rarity=uncommon]
+```
+
+### Custom items
+
+Components also help create every custom vanilla item in a `datapack`. There is lots of usefull components for creating custom components.  
+Here is a list of some useful item components and what they could be used for:
+
+| Component | Use case |
+| :---: | :--- |
+| item_model | Used for custom items with different models |
+| custom_model_data | Used for custom textures offered in a pre-existing or already |
+| custom_data | Used generally in selectors or execute commands for adding on data only commands can read |
+| attribute_modifiers | Used when you want to change an items ability to affect the entities properties |
+| custom_name | Used to give items custom names, contains properties like renaming how an item is on an anvil  |
+| item_name | Used when you want the name of the item itself to be different, cannot see item name hovering in item displays |
+| lore | Used for giving items custom text below the item name, great for extra text when hovered |
+
+![large-image](https://cdn.gamever.io/content/ckeditor/2025/04/13/image-20250414004224-1.jpeg)
 
 ## Entity components
 
@@ -25,3 +52,6 @@ Defining multiple components you need to use `,` like so `[rarity=uncommon,toolt
 ## Usage
 
 ### Reference
+
+Assets:  
+https://gamever.io/knowledge-base/minecraft-commands-guide-how-to-use-item-components-for-names-lore-and-visual-effects
