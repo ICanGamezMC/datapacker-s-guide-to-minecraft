@@ -59,9 +59,25 @@ execute if items entity @s container.* *[minecraft:count=10] run say there is 10
 
 ## Block entity components
 
-## Usage
+Block entity components are different from just regular entity components because they have `block states` like waterlogged 
+or facing a direction. You can even target hotbars in block entities like chests to modify the contents of what items are where.
+
+:::note[Chest - EnderChest]
+There is a difference to storing data in either a chest or enderchest.  
+Chest -> store in block data.  
+Enderchest -> store in player data.  
+:::
+
+Here is an example of a command being executed to check if a chest is waterlogged.
+```mcfunction
+execute if block ~ ~ ~ chest[waterlogged=true]
+```
 
 ### Reference
+
+Information:  
+https://learn.microsoft.com/en-us/minecraft/creator/reference/content/blockreference/examples/blockcomponents/blockcomponentslist?view=minecraft-bedrock-stable  
+https://minecraft.wiki/w/Block_entity  
 
 Assets:  
 https://gamever.io/knowledge-base/minecraft-commands-guide-how-to-use-item-components-for-names-lore-and-visual-effects
