@@ -24,8 +24,19 @@
   --code-background:#19361a;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+
+[class^="docItemContainer_"] {
+  padding-left: 5%;
+  width: 120% !important;
+  max-width: none !important;
+}
+
+
+
+/* For readability concerns, you should choose a lighter palette in dark mode. 
+nvm we are just using dark mode cause it looks nicer
+*/
+[data-theme='dark'] * {
   --ifm-color-primary: #44c225;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -35,11 +46,14 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  --icg-themed-background-dark:#082006;
+  --icg-themed-background-dark:#090f08;
   --icg-themed-background:#53572d;
   --code:#33ff00;
   --code-inline: #e3ffdc;
   --code-background:#21221c;
+  
+  border-color: #193a15 !important;
+
 }
 
 
@@ -50,16 +64,35 @@
   --ifm-color-primary: #ff4d4d !important;
   --code:#ffee00;
 }
-[data-theme='light'] body.page-red {
-  --icg-themed-background: #ffd9ad !important;
-  --icg-themed-background-dark: #ff9494 !important;
+
+
+[data-theme='dark'] body.page-orange * {
+  --icg-themed-background: #803301 !important;
+  --icg-themed-background-dark: #0e0601 !important;
   --ifm-color-primary: #ff4d4d !important;
-  --code:#744500;
+
+  --ifm-font-color-base: #c27925 !important;
+  --ifm-heading-color: #fdf8f1 !important;
+
+  --ifm-link-color: #ffd57a !important;
+  --ifm-link-hover-color: #ffdc9a !important;
+
+  --ifm-menu-color: #e6e6e6 !important;
+  --ifm-menu-color-active: #ffd57a !important;
+
+  --ifm-navbar-background-color: #0e0601 !important;
+  --ifm-navbar-link-color: #e6e6e6 !important;
+  --ifm-navbar-link-hover-color: #ffd57a !important;
+
+  border-color: #834116 !important;
+
+
+  --code:#ffee00;
 }
 
-
-
-
+[data-theme='dark'] body.page-orange .breadcrumbs__link {
+  color: #ff9b19 !important;
+}
 
 
 .theme-doc-sidebar-container{
@@ -82,11 +115,18 @@
 
 
 
+.docRoot_UBD9{
+  background: var(--icg-themed-background-dark);
+}
 
 
+.table-of-contents {
+  display: none !important;
+}
 
-
-
+.table-of-contents__left-border {
+  display: none !important;
+}
 
 
 /* Main Command (Yellow) */
@@ -148,6 +188,10 @@ li[class*='icon-'] > .menu__list-item-collapsible > .menu__link::before {
 }
 
 /* 2. The Icon Library: Assigning SVGs to variables */
+/*
+This color should be used
+%23fcfedc
+*/
 
 .icon-home { 
   --sidebar-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fcfedc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l-2 0l9 -9l9 9l-2 0' /%3E%3Cpath d='M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7' /%3E%3Cpath d='M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6' /%3E%3C/svg%3E"); 
@@ -184,7 +228,9 @@ li[class*='icon-'] > .menu__list-item-collapsible > .menu__link::before {
   --sidebar-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23fcfedc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M16 19h6" /><path d="M19 16v6" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4" /></svg>')
 }
 
-
+.icon-files { 
+  --sidebar-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title>files</title><g fill="none" stroke="%23fcfedc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 2h-4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/><path d="M16.706 2.706A2.4 2.4 0 0 0 15 2v5a1 1 0 0 0 1 1h5a2.4 2.4 0 0 0-.706-1.706zM5 7a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h8a2 2 0 0 0 1.732-1"/></g></svg>')
+}
 
 img[alt="small-icon"] {
   width: 40px;
