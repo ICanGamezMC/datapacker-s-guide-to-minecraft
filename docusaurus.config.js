@@ -80,19 +80,25 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'basicSidebar',
+            position: 'left',
+            label: 'Basics',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'datapackSidebar',
             position: 'left',
             label: 'Datapack',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'datapackSidebar',
             position: 'left',
             label: 'Beet',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'datapackSidebar',
             position: 'left',
             label: 'MCBuild',
           },
