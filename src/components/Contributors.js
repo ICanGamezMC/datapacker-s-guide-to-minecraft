@@ -5,20 +5,15 @@ export default function Contributors() {
   const { metadata } = useDoc();
   const [authors, setAuthors] = useState([]);
 
-  // Replace with your actual details
   const REPO_OWNER = 'ICanGamezMC';
   const REPO_NAME = 'datapacker-s-guide-to-minecraft';
 
   useEffect(() => {
-    // 1. Safety check: Ensure metadata and the internal 'source' exists
     if (!metadata || !metadata.source) {
       console.warn("Metadata not ready yet");
       return;
     }
 
-    // 2. Extract the path. 
-    // metadata.source usually looks like "@site/docs/intro.md" or "@site/docs/folder/file.md"
-    // We want to remove the "@site/" prefix.
     const filePath = metadata.source.replace('@site/', '');
 
     console.log("Corrected GitHub Path:", filePath);

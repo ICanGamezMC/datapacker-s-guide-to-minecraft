@@ -1,0 +1,9 @@
+{
+  "className": "icon-cpu",
+  "label": "Logic",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn more on concepts that will help create datapacks more easily!"
+  }
+}

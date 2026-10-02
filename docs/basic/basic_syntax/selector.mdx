@@ -97,7 +97,7 @@ The syntax of `nbt` always runs as a list like `scores`.
 Example of starting nbt: `@e[nbt={}]`.  
 
 :::note[Note]
-NBT selectors are great for small/medium projects, but using predicates is much faster than nbt selectors.
+NBT selectors are great for small/medium projects, but using predicates offers more versatality.
 :::
 
 ## Exact names
@@ -106,7 +106,7 @@ a player named bob we just run `/execute at Bob run say hi` which this command r
 
 ### UUID
 With `UUID` (Universally Unique Identifier) running a command removed the whole check process, this makes commands that check over lots of entities faster if using `UUID`. 
-`UUID` looks like `b7d2fce5-e292-49b4-b136-98c0f2b75063` which is represented as a 36 character string.
+`UUID` looks like `b7d2fce5-e292-49b4-b136-98c0f2b75063` which is represented as a 36 character string. This method will help cut down on *lookup* time for larger projects.
 :::note[To grab a UUID quickly]
 You just look at the entity when typing out the command, when the `selector` section pops up you get a `UUID` string of that entity.
 :::

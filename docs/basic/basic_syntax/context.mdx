@@ -13,6 +13,44 @@ Think of context situations and **questions you can ask yourself** if a command 
 - Who is running the command?
 - What conditions should the command check for?
 - When should a command run / how long should it run?
+
 ## Situations
 Context in some situations like running the `/tp` command or the `/particle` command require context it some situations. 
-Usually you can specify with things like
+Many commands depend on information about **where, who, when, and under what conditions they are being executed**. 
+Usually you can specify with things like where it runs or selectors on who it runs but sometimes context can't be controlled 
+with the default minecraft command layout.  
+
+## Defaults
+Usually minecraft will assume these things when you type in chat when running a minecraft command.
+* 1 The executing position will normally be your currect position [`~ ~ ~`](./cordinate)
+* 2 The entity executing the command will be you unless using [selectors](./selector)
+* 3 The dimension running the command will always be where the command is ran in.
+* 4 Anchor with commands will normally default to feat seen in `/particle` command using *local* or *relative* [coords](./cordinate).
+* 5 Permission level depends on what executes it, players without `/op` can't run some commands because of this context.
+
+## How to change Context
+Minecraft offers a command solely for changing **context** when running commands. This is the `/execute` command and this command has 
+lots of configurations to modify the context and adds on functionality like storing data output from a command.  
+Here is an example of how a command could have a different execution to the normal command.  
+
+Here is an example of a command running with the normal execution context:
+```mcfunction
+setblock ~ ~ ~ minecraft:acacia_log keep
+```
+When this command is run by a player, ~ ~ ~ refers to the player's current execution position.  
+
+We can use /execute as to change [who](./selector) is executing the command:
+
+```mcfunction
+execute as @a run setblock ~ ~ ~ minecraft:acacia_log keep
+```
+`@a` selects all players. `/execute as @a` therefore runs the command once for each selected player, 
+with each player becoming the current executor.
+
+
+### Reference
+Information:  
+https://minecraft.wiki/w/Command_context  
+https://minecraftcommands.github.io/wiki/questions/commandcontext.html  
+https://wiki.bedrock.dev/commands/new-execute  
+https://www.youtube.com/watch?v=uO41sptfGt8&t=358  
