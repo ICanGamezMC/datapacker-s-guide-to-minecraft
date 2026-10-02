@@ -5,5 +5,8 @@
   "link": {
     "type": "generated-index",
     "description": "Information on contributing, coding wiki syntax, and general guidelines."
+  },
+  "customProps": {
+    "theme": "page-blue"
   }
 }

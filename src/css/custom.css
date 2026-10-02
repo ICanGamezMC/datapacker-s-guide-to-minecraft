@@ -56,6 +56,11 @@ nvm we are just using dark mode cause it looks nicer
   --code-background:#21221c;
   
   border-color: #193a15 !important;
+  
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
+
 
 }
 
@@ -89,6 +94,9 @@ nvm we are just using dark mode cause it looks nicer
 
   border-color: #834116 !important;
 
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
 
   --code:#ffee00;
 }
@@ -118,6 +126,9 @@ nvm we are just using dark mode cause it looks nicer
 
   border-color: #834116 !important;
 
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
 
   --code:#ffee00;
 }
@@ -146,6 +157,11 @@ nvm we are just using dark mode cause it looks nicer
   --ifm-navbar-link-hover-color: #7afff8 !important;
 
   border-color: #161d83 !important;
+
+
+  transition:
+    background-color 0.6s ease,
+    color 0.6s ease;
 
 
   --code:#ffe600;
@@ -331,7 +347,9 @@ img[alt="large-image"] {
   font-style: normal;
 }
 
-
+.minecraft-text {
+  font-family: 'Minecraft', sans-serif;
+}
 
 /*
 This part is entirely just for the marker on simplified explanations
