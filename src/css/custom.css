@@ -322,3 +322,9 @@ This part is entirely just for the marker on simplified explanations
 .simplified-marker:hover::after {
   opacity: 1;
 }
+
+.card{
+  background-color: var(--icg-themed-background-dark);
+  border-style:inset;
+  border-width: 2px;
+}
