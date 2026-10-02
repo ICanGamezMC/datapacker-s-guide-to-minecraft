@@ -68,7 +68,7 @@ nvm we are just using dark mode cause it looks nicer
   --code:#ffee00;
 }
 
-
+/* ORANGE THEME */
 [data-theme='dark'] body.page-orange * {
   --icg-themed-background: #803301 !important;
   --icg-themed-background-dark: #0e0601 !important;
@@ -95,6 +95,64 @@ nvm we are just using dark mode cause it looks nicer
 
 [data-theme='dark'] body.page-orange .breadcrumbs__link {
   color: #ff9b19 !important;
+}
+
+/* YELLOW THEME */
+[data-theme='dark'] body.page-yellow * {
+  --icg-themed-background: #806d01 !important;
+  --icg-themed-background-dark: #110a01 !important;
+  --ifm-color-primary: #ffde4d !important;
+
+  --ifm-font-color-base: #c27925 !important;
+  --ifm-heading-color: #fdf8f1 !important;
+
+  --ifm-link-color: #ffd57a !important;
+  --ifm-link-hover-color: #ffdc9a !important;
+
+  --ifm-menu-color: #e6e6e6 !important;
+  --ifm-menu-color-active: #ffd57a !important;
+
+  --ifm-navbar-background-color: #0e0601 !important;
+  --ifm-navbar-link-color: #e6e6e6 !important;
+  --ifm-navbar-link-hover-color: #ffd57a !important;
+
+  border-color: #834116 !important;
+
+
+  --code:#ffee00;
+}
+
+[data-theme='dark'] body.page-yellow .breadcrumbs__link {
+  color: #ffdc19 !important;
+}
+
+/* YELLOW THEME */
+[data-theme='dark'] body.page-blue * {
+  --icg-themed-background: #171a42 !important;
+  --icg-themed-background-dark: #000000 !important;
+  --ifm-color-primary: #4dfff0 !important;
+
+  --ifm-font-color-base: #4becc4 !important;
+  --ifm-heading-color: #ffffff !important;
+
+  --ifm-link-color: #7ab4ff !important;
+  --ifm-link-hover-color: #9affe9 !important;
+
+  --ifm-menu-color: #e6e6e6 !important;
+  --ifm-menu-color-active: #7affed !important;
+
+  --ifm-navbar-background-color: #0e0601 !important;
+  --ifm-navbar-link-color: #e6e6e6 !important;
+  --ifm-navbar-link-hover-color: #7afff8 !important;
+
+  border-color: #161d83 !important;
+
+
+  --code:#ffe600;
+}
+
+[data-theme='dark'] body.page-blue .breadcrumbs__link {
+  color: #19ffe0 !important;
 }
 
 
@@ -325,6 +383,26 @@ This part is entirely just for the marker on simplified explanations
 
 .card{
   background-color: var(--icg-themed-background-dark);
-  border-style:inset;
-  border-width: 2px;
+  border-style: inset;
+  border-width: 3px;
 }
+
+.theme-admonition{
+  border: none;
+}
+
+/*
+
+THIS IS WORK IN PROGRESS
+
+.card,
+.theme-admonition{
+  border: 8px solid transparent;
+  border-image-source: url("/img/ui/border.png");
+  border-image-slice: 4;
+  border-image-width: 18px;
+  border-image-repeat: repeat;
+  image-rendering: pixelated;
+  
+}
+  */
