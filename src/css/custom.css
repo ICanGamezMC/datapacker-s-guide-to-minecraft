@@ -16,7 +16,7 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-
+  --icg-themed-special:#d7e9d0;
   --icg-themed-background-dark:#d7e9d0;
   --icg-themed-background:#c4cc80;
   --code:#41ff07;
@@ -49,14 +49,17 @@ nvm we are just using dark mode cause it looks nicer
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
+
+  --icg-themed-special:#072901;
   --icg-themed-background-dark:#090f08;
   --icg-themed-background:#53572d;
   --code:#33ff00;
   --code-inline: #e3ffdc;
   --code-background:#21221c;
   
-  border-color: #193a15 !important;
   
+  border-color: #193a15 !important;
+
   transition:
     background-color 0.6s ease,
     color 0.6s ease;
@@ -351,6 +354,15 @@ img[alt="large-image"] {
   font-family: 'Minecraft', sans-serif;
 }
 
+.minecraft-version {
+  font-family: 'Minecraft', sans-serif;
+  background-image: linear-gradient(
+    var(--icg-themed-background-dark), 
+    var(--icg-themed-special)
+  ) !important;
+  color: var(--code-inline)
+  
+}
 /*
 This part is entirely just for the marker on simplified explanations
 */
@@ -405,22 +417,20 @@ This part is entirely just for the marker on simplified explanations
   border-width: 3px;
 }
 
-.theme-admonition{
+.theme-admonition {
+  --line-width: 8px;
+  --line-color: var(--ifm-color-primary);
+
+  position: relative;
   border: none;
+  border-radius: 0;
+  overflow: visible;
+
+  /* Give the content some breathing room */
+  margin: 1.5rem 8px;
 }
 
 /*
 
-THIS IS WORK IN PROGRESS
-
-.card,
-.theme-admonition{
-  border: 8px solid transparent;
-  border-image-source: url("/img/ui/border.png");
-  border-image-slice: 4;
-  border-image-width: 18px;
-  border-image-repeat: repeat;
-  image-rendering: pixelated;
-  
-}
+THIS IS BOARDER WORKS
   */
