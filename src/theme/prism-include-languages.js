@@ -5,7 +5,6 @@ export default function prismIncludeLanguages(PrismObject) {
   const {prism = {}} = themeConfig;
   const {additionalLanguages = []} = prism;
 
-  // Make Prism globally available for the local file to find it
   if (typeof window !== 'undefined') {
     window.Prism = PrismObject;
   }

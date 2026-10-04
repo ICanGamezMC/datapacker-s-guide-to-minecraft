@@ -1,7 +1,6 @@
 (function (Prism) {
   if (typeof Prism !== 'undefined') {
     Prism.languages.console = {
-      // 1. Define the bracketed prefix
       'console-prefix': {
         pattern: /^\[[^\]]+\]/m,
         inside: {
@@ -11,7 +10,6 @@
           'string': /thread|INFO|CHAT/
         }
       },
-      // 4. Also catch 'Render' if it appears outside brackets
       'keyword': /\b(?:Render|CHAT|kill|say|System|Server)\b/i,
       
       'player-name': {
