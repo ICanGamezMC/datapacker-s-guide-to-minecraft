@@ -36,4 +36,20 @@ The value of the coins for the current player is now 15!
 
 **But wait**... the scoreboard isn't actually counting coins but we associated the number with the amount of coins. 
 This is what changes the meaning of information being stored and how you use it. The coding world can call the action 
-of making up things and building the code around t
+of making up things and building the code around an idea is abstraction.
+
+# Retrieving Data
+Storing information is only half of the problem. If Minecraft remembers something, your commands need a way to **retrieve** that information 
+and use it. One way to inspect information stored inside Minecraft is with the `/data get` command.
+Unlike a scoreboard, which is designed around storing individual numbers, /data allows you to interact with Minecraft's [NBT](../basic_syntax/components) data.
+An example of grabbing a current entities data which contains large amounts of information about itself:
+```mcfunction
+data get entity @s
+```
+This asks Minecraft to retrieve the data belonging to the [current executor](../basic_syntax/selector).
+
+You will get information describing the entity, such as its position, rotation, health, inventory, and many other properties.
+You can also retrieve a specific piece of that data:
+```mcfunction
+data get entity @s Health
+```
