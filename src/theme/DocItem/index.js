@@ -23,7 +23,7 @@ export default function DocItemWrapper(props) {
             border: 'none',
           }}
         >
-          <span>* Last Checked in Minecraft version: {version}</span>
+          <span>* Last checked in Minecraft version: {version}</span>
         </div>
       )}
 

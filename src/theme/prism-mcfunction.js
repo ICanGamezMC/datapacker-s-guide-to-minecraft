@@ -7,7 +7,7 @@
             pattern: /\b(?:say|execute|tp|teleport|summon|give|setblock|fill|data|tag|team|scoreboard|advancement|tellraw|kill)\b/
         },
         'green': {
-            pattern: /\b(?:if|unless)\b/
+            pattern: /\b(?:if|unless|add|set)\b/
         },
         // NBT Data (treat it like JSON)
         'string': {

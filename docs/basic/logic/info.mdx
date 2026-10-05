@@ -7,3 +7,33 @@ minecraft_version: "26.1"
 # Information
 > describe me this entity with only commands  
 
+Minecraft has ways of storing, retrieving, and manipulating data and information with different use cases. 
+As you start building more complex creations with commands you will run into a fundamental problem:  
+
+**How do you make Minecraft remember something?**  
+
+There are several implementations that minecraft allows for storing data like numbers with the use of 
+`/scoreboard` command, or store more complex data formats with the use of `/execute store` command.
+
+## Scoreboard
+With the `scoreboard` command you can use it as a variable. It holds any number between `-2,147,483,648` to `2,147,483,647` with no decimals.
+Think of this command as a **number associated with an objective**.  
+You can think of an objective as a named peace of information:
+```mcfunction
+scoreboard objectives add coins dummy
+```
+This creates an object called coins.  
+You can then give a player a value of some amount of *coins*.
+```mcfunction
+scoreboard players set @s coins 10
+```
+Now because this isn't a constant but rather a variable you can change the amount of coins 
+a player can have!
+```mcfunction
+scoreboard players add @s coins 5
+```
+The value of the coins for the current player is now 15!
+
+**But wait**... the scoreboard isn't actually counting coins but we associated the number with the amount of coins. 
+This is what changes the meaning of information being stored and how you use it. The coding world can call the action 
+of making up things and building the code around t
