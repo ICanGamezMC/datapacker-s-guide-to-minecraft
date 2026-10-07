@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_class_name: icon-terminal
-minecraft_version: "26.1"
+minecraft_version: "26.2"
 ---
 
 # Information
@@ -53,3 +53,36 @@ You can also retrieve a specific piece of that data:
 ```mcfunction
 data get entity @s Health
 ```
+## Reading vs. Storing
+
+* Storing information means making Minecraft remember a value.  
+* Retrieving information means asking Minecraft for a value it already remembers.  
+* Manipulating information means changing that value or using it to affect something else.
+
+For example, a player's health already exists as part of their entity data:
+```mcfunction
+data get entity @s Health
+```
+Minecraft can read that value, But what if we want to put that value somewhere else?  
+This is where commands such as `/execute store` become useful.  
+For example:
+```mcfunction
+execute store result score @s health run data get entity @s Health
+```
+
+## Limitations
+With minecraft you can't edit certain data dynamically without some modification to non-vanilla like code. Think about the `/data modify` command as you can't edit 
+the player's health with this command or the player's current velocity. There are work arounds to this with commands such as `/attribute` or `/tp`
+
+### Key takeaway
+
+What matters is where the information is stored, what form it takes, and what your commands can do with it.
+And as your creations become more complex, you will constantly move information between different systems in Minecraft to make those systems work together.
+
+
+### Reference
+
+Information:  
+https://feedback.minecraft.net/hc/en-us/articles/44551668333837-Minecraft-Java-Edition-26-1?utm_source=chatgpt.com  
+https://www.minecraft.net/fi-fi/article/minecraft-snapshot-17w45a?utm_source=chatgpt.com  
+https://feedback.minecraft.net/hc/en-us/articles/43431470235021-Minecraft-Java-Edition-26-1-Snapshot-6?utm_source=chatgpt.com
