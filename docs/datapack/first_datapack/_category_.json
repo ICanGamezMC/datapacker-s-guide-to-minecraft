@@ -1,0 +1,12 @@
+{
+  "className": "icon-files",
+  "label": "First Datapack",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Lets create your first datapack."
+  },
+  "customProps": {
+    "theme": "page-orange"
+  }
+}
