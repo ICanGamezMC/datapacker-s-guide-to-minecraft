@@ -30,8 +30,30 @@ sidebar_class_name: icon-home
 minecraft_version: "26.2"
 ---
 ```
+After that there is usually just standard mark down format with using symbols like `#` for headers and `*` for lists.
 
+At the bottom of the general pages there should be resources section where information and assets are found.
+It looks roughly like this:
+```mdx
+### Reference
 
+Information:  
+
+Assets:  
+```
+
+For page themes with different colored pages it should go as followed
+* nothing for introducion and basics tab
+* `page-blue` for wiki related information like this section!
+* `page-orange` for datapack tab
+
+To use it inside a markdown file copy and change the `colorClass` to said theme
+```js
+import ThemeWrapper from '@site/src/components/ThemeWrapper';
+
+<ThemeWrapper colorClass="page-blue">
+</ThemeWrapper>
+```
 
 
 import ThemeWrapper from '@site/src/components/ThemeWrapper';
