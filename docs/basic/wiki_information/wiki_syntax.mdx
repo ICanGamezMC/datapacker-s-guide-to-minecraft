@@ -8,6 +8,28 @@ sidebar_class_name: icon-home
 With writing or updating a document wiki syntax is important. You would use standard markdown format for most information, headers will appear 
 on the sidebar of the wiki like how `Wiki Syntax` is being displayed currently.
 
+There are two major parts to wiki syntax, one is `mdx` files or more called markdown files, and the other is `json` files or rather called category files. 
+
+## Markdown Files
+Getting started editing or creating a new markdown file always follows these things, a header, content, and external resources where there more information could be found.
+Some files have a page theme like this one and there is a grouping to page themes.
+
+Pages with a header will always have:
+```mdx
+---
+sidebar_position: 2
+sidebar_class_name: icon-home
+---
+```
+Sometimes there will need to be context if information is tied to minecraft or other minecraft relating aspects like `datapacks` or `beet`.
+To use this you can create a modified header which would include the info card telling which version the page was last checked.
+```mdx
+---
+sidebar_position: 2
+sidebar_class_name: icon-home
+minecraft_version: "26.2"
+---
+```
 
 
 
