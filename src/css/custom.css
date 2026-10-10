@@ -197,9 +197,35 @@ nvm we are just using dark mode cause it looks nicer
   font-family: 'Minecraft', sans-serif;
 }
 
+
+/*SIDE BAR ONLY SECTION*/
 .theme-doc-sidebar-container {
   font-family: 'Minecraft', sans-serif;
+  width: 200px !important;
+    min-width: 200px !important;
+    flex: 0 0 200px !important;
+
+    transition:
+      width 250ms ease,
+      min-width 250ms ease,
+      flex-basis 250ms ease !important;
+
 }
+.theme-doc-sidebar-container:hover {
+    width: 280px !important;
+    min-width: 280px !important;
+    flex-basis: 280px !important;
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-doc-sidebar-container,
+  .menu__link,
+  .menu__list-item-collapsible {
+    transition: none !important;
+  }
+}
+/*SIDE BAR ONLY SECTION ENDS HERE*/
+
 
 .main-wrapper{
   background: var(--icg-themed-background-dark);

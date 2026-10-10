@@ -62,13 +62,26 @@ With the code you can create a markdown note like this:
 :::note[This is a title for the note]
 This is a note
 :::
-
 ```
 What it looks like:
 :::note[This is a title for the note]
 This is a note
 :::
 
+Sometimes a page will require an image and depending on the size of the image you can either include your own html component like the colorClass or 
+there is two presets for different types of images.
+
+**large images:**
+```mdx
+![large-image](link_or_address_to_image)
+```
+This makes it so that it expands fully from container side to side.
+
+**small images:**
+```mdx
+![smallimage](link_or_address_to_image)
+```
+This makes it so that the images fit to a 
 
 import ThemeWrapper from '@site/src/components/ThemeWrapper';
 
